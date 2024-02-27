@@ -26,16 +26,14 @@ public class PostController {
         return postService.commentOnPost(createCommentRequest);
     }
 
-//   @GetMapping("/getPost/{id}")
-//   public Post getPostByPostId(@PathVariable(name = "id") String postId, String userId){
-//        return postService.getPostByPostId(postId, userId);
-//   }
+   @GetMapping("/getPost/{id}")
+   public Post getPostByPostId(@PathVariable(name = "id") String postId, String userId){
+        return postService.getPostByPostId(postId, userId);
+   }
 
    @DeleteMapping("/deletePost")
    public String deletePost(@PathVariable(name = "id") String postId )
    {
         return postService.delete(postId);
    }
-
-
 }
